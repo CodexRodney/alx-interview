@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+Defines a function pascal
+"""
+
+
 def pascal_triangle(n):
     """
     Returns a list of lists of integers of integers representing
