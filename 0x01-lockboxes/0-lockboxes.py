@@ -15,13 +15,19 @@ def canUnlockAll(boxes):
     len_box = len(boxes) - 1
     if boxes[0] == []:
         return False
-    keys.update(boxes[0])
+    for x in boxes[0]:
+        if x > len_box:
+            continue
+        keys.add(x)
     while pos < len_box:
         new_keys = set()
         for z in keys:
             if z > len_box:
                 continue
-            new_keys.update(boxes[z])
+            for y in boxes[z]:
+                if y > len_box:
+                    continue
+                new_keys.add(y)
         keys.update(new_keys)
         pos += 1
         if pos not in keys:
