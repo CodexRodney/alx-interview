@@ -8,6 +8,8 @@ def island_perimeter(grid):
     """
     Returns the Area of an island defines in grid
     """
+    if 0 not in grid:
+        return 0
     len_grid = len(grid)
     length1 = 0  # Used to count the length of the island
     length2 = 0  # Holds the length of the island
@@ -33,5 +35,4 @@ def island_perimeter(grid):
         if width1 > width2:
             width2 = width1
         width1 = 0
-    print(length2, width2)
     return ((length2 * 2) + (width2 * 2))
