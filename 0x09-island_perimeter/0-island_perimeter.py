@@ -15,6 +15,8 @@ def island_perimeter(grid):
     width2 = 0  # Holds the width of the island
     # counts the length of the grid
     for i in range(len_grid):
+        if i > len(grid[i]) - 1:
+            break
         for z in range(len_grid):
             if grid[z][i] == 1:
                 length1 += 1
